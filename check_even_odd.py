@@ -1,16 +1,9 @@
-def check_even_odd(number):
-    result = check_is_integer(number)
-    if result is None:
-        return
-
-    if result % 2 == 0:
-        return "PAR"
-
-    return "IMPAR"
+def is_even(number):
+    result = is_integer(number)
+    if result:
+        return number % 2 == 0
+    return False
 
 
-def check_is_integer(number):
-    if type(number) is not int:
-        return
-
-    return number
+def is_integer(number):
+    return isinstance(number, int)
